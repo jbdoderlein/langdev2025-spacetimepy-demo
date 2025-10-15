@@ -9,4 +9,4 @@ dependencies = [
 ]
 
 [tool.uv.sources]
-spacetimepy = { git = "https://github.com/jbdoderlein/PyMonitor" }
+spacetimepy = { path = "../PyMonitor", editable = true }
