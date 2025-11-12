@@ -29,7 +29,7 @@ score = 0
 # Platforms
 platforms = [
     {'x': 200, 'y': 500, 'width': 150, 'height': 20},
-    {'x': 400, 'y': 400, 'width': 100, 'height': 20},
+    {'x': 400, 'y': 400, 'width': 150, 'height': 20},
     {'x': 600, 'y': 300, 'width': 120, 'height': 20},
     {'x': 100, 'y': 350, 'width': 80, 'height': 20},
     {'x': 550, 'y': 500, 'width': 100, 'height': 20},
@@ -62,7 +62,7 @@ def update_player():
         
     # Handle jumping
     if (keys[pygame.K_SPACE] or keys[pygame.K_UP] or keys[pygame.K_w]) and on_ground:
-        player_vel_y = -16  # Jump strength
+        player_vel_y = -14  # Jump strength
         on_ground = False
         
     # Apply gravity
@@ -148,7 +148,6 @@ def get_pressed_keys():
     return pygame.key.get_pressed()
 
 @spacetimepy.function(
-    #ignore=['SCREEN', 'FONT', 'clock'], 
     return_hooks=[save_screen],
     track=[get_events, get_pressed_keys]
 )

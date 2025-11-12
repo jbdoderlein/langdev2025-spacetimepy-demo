@@ -93,7 +93,6 @@ def save_screen(m,c,o,r):
     return {"image": base64.encodebytes(buffer.getvalue()).decode('utf-8')}
 
 @spacetimepy.function(
-        #ignore=['SCREEN', 'FONT', 'clock'], 
         return_hooks=[save_screen],
         track=[get_events,random.randint])
 def display_game():
