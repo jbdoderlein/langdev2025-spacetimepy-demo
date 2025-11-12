@@ -33,7 +33,7 @@ platforms = [
     {'x': 600, 'y': 300, 'width': 120, 'height': 20},
     {'x': 100, 'y': 350, 'width': 80, 'height': 20},
     {'x': 550, 'y': 500, 'width': 100, 'height': 20},
-    {'x': 300, 'y': 200, 'width': 150, 'height': 20},
+    {'x': 300, 'y': 200, 'width': 150, 'height': 20}, # high platform
     {'x': 0, 'y': 250, 'width': 80, 'height': 20},
     {'x': 700, 'y': 450, 'width': 100, 'height': 20},
 ]
@@ -62,7 +62,7 @@ def update_player():
         
     # Handle jumping
     if (keys[pygame.K_SPACE] or keys[pygame.K_UP] or keys[pygame.K_w]) and on_ground:
-        player_vel_y = -14  # Jump strength
+        player_vel_y = -13  # Jump strength
         on_ground = False
         
     # Apply gravity
